@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+    
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <main id="search-widget">
+        <div v-cloak class="container">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" v-bind:class="{active: activeTab === 1}" v-on:click="activeTab=1">Select a Vehicle</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" v-bind:class="{active: activeTab === 2}" v-on:click="activeTab=2">My Garage</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" v-bind:class="{active: activeTab === 3}" v-on:click="activeTab=3">Search by VIN</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane" v-bind:class="{show: activeTab === 1, active: activeTab === 1}">Consequat occaecat ullamco amet non eiusmod nostrud dolore irure incididunt est duis anim sunt officia. Fugiat velit proident aliquip nisi incididunt nostrud exercitation proident est nisi. Irure magna elit commodo anim ex veniam culpa eiusmod id nostrud sit cupidatat in veniam ad. Eiusmod consequat eu adipisicing minim anim aliquip cupidatat culpa excepteur quis. Occaecat sit eu exercitation irure Lorem incididunt nostrud.</div>
+                <div class="tab-pane" v-bind:class="{show: activeTab === 2, active: activeTab === 2}">Ad pariatur nostrud pariatur exercitation ipsum ipsum culpa mollit commodo mollit ex. Aute sunt incididunt amet commodo est sint nisi deserunt pariatur do. Aliquip ex eiusmod voluptate exercitation cillum id incididunt elit sunt. Qui minim sit magna Lorem id et dolore velit Lorem amet exercitation duis deserunt. Anim id labore elit adipisicing ut in id occaecat pariatur ut ullamco ea tempor duis.</div>
+                <div class="tab-pane" v-bind:class="{show: activeTab === 3, active: activeTab === 3}">Est quis nulla laborum officia ad nisi ex nostrud culpa Lorem excepteur aliquip dolor aliqua irure ex. Nulla ut duis ipsum nisi elit fugiat commodo sunt reprehenderit laborum veniam eu veniam. Eiusmod minim exercitation fugiat irure ex labore incididunt do fugiat commodo aliquip sit id deserunt reprehenderit aliquip nostrud. Amet ex cupidatat excepteur aute veniam incididunt mollit cupidatat esse irure officia elit do ipsum ullamco Lorem. Ullamco ut ad minim do mollit labore ipsum laboris ipsum commodo sunt tempor enim incididunt. Commodo quis sunt dolore aliquip aute tempor irure magna enim minim reprehenderit. Ullamco consectetur culpa veniam sint cillum aliqua incididunt velit ullamco sunt ullamco quis quis commodo voluptate. Mollit nulla nostrud adipisicing aliqua cupidatat aliqua pariatur mollit voluptate voluptate consequat non.</div>
+            </div>
+        </div>
+    </main>
+    @*<script>
+        (function () {
+            var load = setInterval(function () {
+                if (window.Vue) {
+                    new Vue({
+                        el: '#search-widget',
+                        data: {
+                            activeTab: 1
+                        }
+                    })
+                    clearInterval(load);
+                }
+            }, 10)
+        })();
+
+    </script>*@
+    @section Scripts {
+        <script type="text/javascript">
+            new Vue({
+                el: '#search-widget',
+                data: {
+                    activeTab: 1
+                }
+            })
+        </script>
+    }
+</div>
